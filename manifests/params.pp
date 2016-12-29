@@ -140,7 +140,8 @@ class rsyslog::params {
         $im_journal_ratelimit_interval       = '600'
         $im_journal_ratelimit_burst          = '20000'
         $im_journal_ignore_previous_messages = 'off'
-        $im_journal_statefile                = 'imjournal.state'
+# Turning it off permanently. this is just useless noise for OSSEC-HIDS users, not sure who actually does use it.
+        $im_journal_statefile                = undef
       } else {
         $rsyslog_package_name                = 'rsyslog5'
         $mysql_package_name                  = 'rsyslog5-mysql'
